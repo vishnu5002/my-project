@@ -1,0 +1,12 @@
+services:
+  caido:
+    image: caido/caido:latest
+    container_name: caido-proxy
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - caido_data:/home/caido/.local/share/caido
+
+volumes:
+  caido_data:
